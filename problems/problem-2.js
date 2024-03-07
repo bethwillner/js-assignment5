@@ -50,5 +50,11 @@ const strings = [
 ]
 
 const jedi = strings // append your code here
+	.filter(strings => strings.includes("Jedi"))
+	.map(string => {
+		return JSON.parse(`{${string}}`)
+	//need curly brackets for JSON and include the string 
+//map has return!!!!
+})
 
 test("Problem 2", jedi)
